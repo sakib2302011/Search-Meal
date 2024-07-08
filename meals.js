@@ -35,8 +35,10 @@ const displayFood = meals => {
         `
         foodContainer.appendChild(mealDiv);
     });
+    toggleSpninner(false);
 }
 const serachFood = () => {
+    toggleSpninner(true);
     const searchName = document.getElementById('search-name');
     const food = searchName.value;
     loadFood(food);
@@ -66,3 +68,13 @@ const displayMealDetails = meal => {
     `
     detailContainer.appendChild(mealDiv);
 }
+
+const toggleSpninner = isLoading => {
+    const loader = document.getElementById('spinner');
+    if(isLoading){
+      loader.classList.remove('d-none');
+    }
+    else{
+      loader.classList.add('d-none');
+    }
+  }

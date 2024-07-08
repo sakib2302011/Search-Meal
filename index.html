@@ -11,9 +11,14 @@
         <h1 class="mt-5 text-center text-primary">Choose your favourite Food</h1>
     </header>
     <main>
-        <section class="d-flex align-items-center gap-3 my-5">
+        <section class="d-flex align-items-center justify-content-center gap-3 my-5">
             <input type="text" name="" id="search-name" placeholder="Please search your food ">
             <button class="btn btn-primary" onclick="serachFood()">Search</button>
+        </section>
+        <section id="spinner" class="d-none">
+            <div class="spinner-border text-primary position-absolute top-50 start-50" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
         </section>
         <section id="meal-details" class="my-5" style="width: 22rem;">
             
